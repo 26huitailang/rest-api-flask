@@ -25,3 +25,11 @@ REST应该是Stateless的，首先明白资源是服务器上的一个实体，�
 - 用户的授权，使用Flask_JWT实现，返回认证用户相应的token，通过@jwt_required()装饰器限制一些API的请求，正确的token才能通过
 - 数据的过滤，Flask_RESTful的reqparse构建parser，符合要求的数据才能通过
 
+### section5
+
+这部分加入了数据库，使用的是SQLite，使数据持久化，这样即使停止app数据也不会丢失，并修改对应的item的操作，将item独立为单独文件，一方面方便配置管理，一方面是python每次import文件时，都会运行文件，所以尽量不放到app.py中。
+
+### section6
+
+这部分尝试用ORM工具--SQLAlchemy，对于关系型数据库都能通过它将数据库映射为一个程序对象，在操作中像访问对象和方法一样非常方便。
+
